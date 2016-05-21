@@ -22,4 +22,14 @@
     [super didReceiveMemoryWarning];
 }
 
+- (IBAction)questionButton:(id)sender {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Here is your question!" message:@"Do you like Korean food?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *closeActionYes = [UIAlertAction actionWithTitle:@"YES" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *closeActionNo = [UIAlertAction actionWithTitle:@"NO" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:closeActionYes];
+    [alert addAction:closeActionNo];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 @end
